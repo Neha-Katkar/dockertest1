@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Cloning out Git repo') { 
             steps {
-                git credentialsId: 'GitHub-id', url: 'https://github.com/Neha-Katkar/DockerProject.git'
+                git credentialsId: 'GitHub-id', url: 'https://github.com/Neha-Katkar/dockertest1.git'
             }
         }
         stage('Buildig our Image') { 
