@@ -1,17 +1,17 @@
 pipeline {
     environment {
-       AWS_ACCOUNT_ID = '752140524248'
-       AWS_DEFAULT_REGION = 'ap-southeast-2'
-       IMAGE_REPO_NAME = 'myapp'
+       AWS_ACCOUNT_ID = '665720634249'
+       AWS_DEFAULT_REGION = 'ap-south-1'
+       IMAGE_REPO_NAME = 'trial'
        REPOSITORY = '${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}'
-       dockerhost = '10.1.1.202'
+       dockerhost = '172.31.10.91'
            }
        
     agent any 
     stages {
         stage('Cloning out Git repo') { 
             steps {
-                git credentialsId: 'GitHub-id', url: 'https://github.com/vinaykumar331/dockertest1.git'
+                git credentialsId: 'GitHub-id', url: 'https://github.com/Neha-Katkar/DockerProject.git'
             }
         }
         stage('Buildig our Image') { 
